@@ -10,7 +10,7 @@ gl.shaderSource(fragmentShader,
 	+ "varying highp vec2 vTextureCoord;"
 	+ "uniform sampler2D uSampler;"
 	+ "void main(void) {"
-		+ "gl_FragColor = texture2D(uSampler, vec2(vTextureCoord.s, vTextureCoord.t));"
+		+ "gl_FragColor = texture2D(uSampler, vec2(vTextureCoord.s * vTextureCoord.s, vTextureCoord.t * vTextureCoord.t));"
 	+ "}"
 );
 gl.compileShader(fragmentShader);
